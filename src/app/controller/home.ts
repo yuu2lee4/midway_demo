@@ -13,7 +13,6 @@ export class HomeController {
   @get('/test')
   async test(ctx) {
     const res = await this.testS.count();
-    console.log(res);
     ctx.body = {success: true, message: 'OK', data: res};
   }
 }

@@ -13,7 +13,6 @@ const getJsByEnv = (filename, env) => {
 export default (app) => {
   const basePath = path.join(app.baseDir, 'app/graphql');
   const types = fs.readdirSync(basePath);
-  console.log(types)
 
   Object.defineProperty(app, 'connectorClass', {
     get() {
@@ -23,7 +22,6 @@ export default (app) => {
         types.forEach((type) => {
 
           const connectorFile = path.join(basePath, type, getJsByEnv('connector', app.config.env));
-          console.log(connectorFile)
           /* istanbul ignore else */
           if (fs.existsSync(connectorFile)) {
             const connector = require(connectorFile).default;

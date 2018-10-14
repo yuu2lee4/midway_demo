@@ -42,6 +42,6 @@
       "statements"
     ],
     "ordered-imports": false,
-    "no-shadowed-variable": false,
+    "no-shadowed-variable": false
   }
 }

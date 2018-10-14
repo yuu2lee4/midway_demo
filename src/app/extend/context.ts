@@ -7,7 +7,7 @@ export default {
      * connector instance
      * @member Context#connector
      */
-  
+
     get connector(this: Context) {
       /* istanbul ignore else */
       if (!this[SYMBOL_CONNECTOR]) {
@@ -19,4 +19,4 @@ export default {
       }
       return this[SYMBOL_CONNECTOR];
     },
-}
+};
