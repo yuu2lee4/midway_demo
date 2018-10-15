@@ -3,7 +3,7 @@ import { controller, get, provide, inject } from 'midway';
 @provide()
 @controller('/')
 export class HomeController {
-  @inject('testService')
+  @inject('cityService')
   testS;
 
   @get('/')
@@ -12,7 +12,7 @@ export class HomeController {
   }
   @get('/test')
   async test(ctx) {
-    const res = await this.testS.count();
+    const res = await this.testS.test();
     ctx.body = {success: true, message: 'OK', data: res};
   }
 }

@@ -1,4 +1,0 @@
-type Query {
-    "测试"
-    test: String
-}
