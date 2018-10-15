@@ -7,7 +7,6 @@ export default class CityService extends BaseService {
     return 'city';
   }
   async test() {
-    console.log('test');
     return 213;
   }
 }
