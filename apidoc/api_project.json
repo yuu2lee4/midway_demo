@@ -1,0 +1,1 @@
+{  "name": "甘南旅游局",  "version": "0.1.0",  "description": "甘南旅游局api文档",  "title": "甘南旅游局api文档",  "url": "https://api.github.com/v1",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-10-17T14:48:06.497Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }}

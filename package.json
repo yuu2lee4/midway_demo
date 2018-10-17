@@ -10,6 +10,7 @@
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.11.7",
+    "apidoc": "^0.17.6",
     "egg-ci": "^1.9.2",
     "midway-bin": "*",
     "midway-mock": "*",
@@ -32,7 +33,8 @@
     "cov": "midway-bin cov --ts",
     "lint": "tslint -c tslint.json --project .",
     "ci": "midway-bin cov --ts",
-    "build": "midway-bin build -c"
+    "build": "midway-bin build -c",
+    "doc": "apidoc -i src/app/controller -o apidoc"
   },
   "ci": {
     "version": "8, 9"
