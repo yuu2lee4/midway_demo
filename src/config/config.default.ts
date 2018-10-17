@@ -16,6 +16,9 @@ export = (appInfo: any) => {
       database: 'gannan',
     },
   };
+  config.graphql = {
+    router: '/graphql',
+  };
   config.security = {
     csrf: {
       enable: false,

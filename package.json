@@ -4,7 +4,10 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "apollo-server-koa": "^2.1.0",
     "egg-mysql": "^3.0.0",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.1",
     "midway": "0.4.3"
   },
   "devDependencies": {
