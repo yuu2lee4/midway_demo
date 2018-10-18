@@ -2,9 +2,9 @@
 // export = {
 //   static: true,
 // };
-export = {
+/* export = {
     mysql: {
         enable: true,
         package: 'egg-mysql',
     },
-};
+}; */
