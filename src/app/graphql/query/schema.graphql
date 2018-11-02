@@ -1,4 +1,7 @@
 type Query {
-  test: String
+  "不调用service"
+  notCallService: String
+  "调用service"
+  callService: String
 }
 

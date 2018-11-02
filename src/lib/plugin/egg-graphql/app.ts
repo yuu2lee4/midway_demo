@@ -1,5 +1,3 @@
-// tslint:disable:no-console
-// comment just for gitlab pipline
 import { ApolloServer } from 'apollo-server-koa';
 import loadConnector from './lib/load_connector';
 import loadSchema from './lib/load_schema';

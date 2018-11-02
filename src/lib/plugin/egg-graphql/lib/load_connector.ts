@@ -3,11 +3,11 @@ import * as path from 'path';
 
 const SYMBOL_CONNECTOR_CLASS = Symbol('Application#connectorClass');
 
-const getJsByEnv = (filename, env) => {
-  if (env !== 'local') {
-    return `${filename}.js`;
-  } else {
+const getJsByEnv = (filename) => {
+  if (process.env.EGG_TYPESCRIPT === 'true') {
     return `${filename}.ts`;
+  } else {
+    return `${filename}.js`;
   }
 };
 export default (app) => {
@@ -21,7 +21,7 @@ export default (app) => {
 
         types.forEach((type) => {
 
-          const connectorFile = path.join(basePath, type, getJsByEnv('connector', app.config.env));
+          const connectorFile = path.join(basePath, type, getJsByEnv('connector'));
           /* istanbul ignore else */
           if (fs.existsSync(connectorFile)) {
             const connector = require(connectorFile).default;

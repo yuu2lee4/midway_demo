@@ -4,8 +4,10 @@ import { inject } from 'midway';
 export default class TempConnector {
   @inject('cityService')
   service;
-  async test1() {
-    return '123123';
-    // return this.service.getModelName();
+  async notCallService() {
+    return 'notCallService is ok';
+  }
+  async callService() {
+    return this.service.test();
   }
 }

@@ -5,11 +5,11 @@ import * as path from 'path';
 
 const SYMBOL_SCHEMA = Symbol('Applicaton#schema');
 
-const getJsByEnv = (filename, env) => {
-  if (env !== 'local') {
-    return `${filename}.js`;
-  } else {
+const getJsByEnv = (filename) => {
+  if (process.env.EGG_TYPESCRIPT === 'true') {
     return `${filename}.ts`;
+  } else {
+    return `${filename}.js`;
   }
 };
 export default (app) => {
@@ -33,14 +33,14 @@ export default (app) => {
     }
 
     // 加载resolver
-    const resolverFile = path.join(basePath, type, getJsByEnv('resolver', app.config.env));
+    const resolverFile = path.join(basePath, type, getJsByEnv('resolver'));
     if (fs.existsSync(resolverFile)) {
       const resolver = require(resolverFile).default;
       _.merge(resolverMap, resolver);
     }
 
     // 加载directive resolver
-    const directiveFile = path.join(basePath, type, getJsByEnv('directive', app.config.env));
+    const directiveFile = path.join(basePath, type, getJsByEnv('directive'));
     if (fs.existsSync(directiveFile)) {
       const directive = require(directiveFile);
       _.merge(directiveMap, directive);
